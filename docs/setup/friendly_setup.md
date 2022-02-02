@@ -9,18 +9,18 @@ You need to install nodejs version 14 or higher from [nodejs.org](https://nodejs
 #### Note: It is highly recommend that the following commands be used in a user account and not in Root since it poses threats to your server. 
 
 
-1. First clone the Fosscrod-server github repository by running the following command: 
+1. First clone the Fosscord-server github repository by running the following command: 
 ```
 git clone https://github.com/fosscord/fosscord-server
 ```
 
-2. After that go to the directory fosscord-server/bundle 
+2. After that, go to the directory fosscord-server/bundle. 
 ```
 cd fosscord-server
 cd bundle
 ```
 
-3. If you have not installed npm yet run the below cmd: 
+3. If you have not installed npm yet, run the below cmd: 
 ```
 sudo apt install npm 
 ```
@@ -35,9 +35,9 @@ su postgres -c psql
 CREATE USER fosscord WITH CREATEDB PASSWORD 'your.password';
 create database fosscord with owner fosscord;
 ``` 
-Note: Change the 'your.password' with the password you would like to keep for your database. You will need this password for accessing your DB. 
+Note: Change 'your.password' to the password you would like for your database. You will need this password for accessing your DB. 
 
-6. We will now create a env file to configure fosscord server to use the custom DB instead of the default one. 
+6. We will now create an env file to configure fosscord server to use the custom DB instead of the default one. 
 ```
 nano .env
 ```
@@ -83,7 +83,7 @@ nano /etc/nginx/conf.d/yourdomain.com.conf
 ```
 #### Note: Make sure to change yourdomain.com to your domain name. 
 
-12. Inside the file paste the following lines: 
+12. Inside the file, paste the following lines: 
 ```
 limit_req_zone $binary_remote_addr zone=registerzone:10m rate=1r/m;
 server {
